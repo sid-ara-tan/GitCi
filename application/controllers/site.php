@@ -4,7 +4,7 @@ class Site extends CI_Controller{
         echo "Hello dude!";
         echo "this is siddhartha";
         echo "this is Tanzir";
-
+        echo "inside a deleted function";
 
     }
 }
