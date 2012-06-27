@@ -38,7 +38,7 @@
 |
 */
 
-$route['default_controller'] = "mock";
+$route['default_controller'] = "authenticate/login";
 $route['404_override'] = '';
 
 
