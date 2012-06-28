@@ -7,7 +7,7 @@ class Adminarea extends CI_Controller {
         $this->is_logged_in();
     }
 
-    function login() {
+    function home() {
 
         $userid_session = $this->session->userdata('name');
         $this->load->model('admin', 'Admin');
@@ -17,9 +17,34 @@ class Adminarea extends CI_Controller {
         $this->load->view('admin_page', $data);
     }
 
+    function insert_artist() {
+        
+    }
 
+    function insert_album() {
+        
+    }
 
-    
+    function insert_track() {
+        
+    }
+
+    function edit_price() {
+        
+    }
+
+    function edit_info() {
+        
+    }
+
+    function delete_info() {
+        
+    }
+
+    function view_sell_info() {
+        
+    }
+
     function is_logged_in() {
         $is_logged = $this->session->userdata('islogged');
 
@@ -29,6 +54,7 @@ class Adminarea extends CI_Controller {
             die();
         }
     }
+
 }
 ?>
 

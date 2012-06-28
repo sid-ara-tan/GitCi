@@ -46,7 +46,7 @@ class Authenticate extends CI_Controller {
             if ($type == 'one') {
                 redirect('clientarea/login');
             } else if ($type == 'two')
-                redirect('adminarea/login');
+                redirect('adminarea/home');
         }
 
         else
