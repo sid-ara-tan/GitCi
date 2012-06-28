@@ -58,7 +58,7 @@ input[type=submit]:hover{
 }
 
 .error{
-    color: #393939;
+    color: red;
     font-size: 15px;
 }
 
