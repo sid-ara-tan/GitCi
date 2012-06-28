@@ -35,7 +35,10 @@ class Search extends CI_Controller{
     }
     
     function getAlbum($album_id){
-        echo "in album".$album_id;
+        $data['infotype']='album';
+        $this->load->model('album');
+        //$data['info']=$this->album->getAlbumById($album_id);
+        $this->load->view('artist_info',$data);
     }
     
     function searchTrack($task=''){
@@ -52,7 +55,7 @@ class Search extends CI_Controller{
     
     function getTrack($track_id){
         
-        $data['infotype']='artist';
+        $data['infotype']='track';
         $this->load->model('track');
         $data['info']=$this->track->getTrackById($track_id);
         $this->load->view('artist_info',$data);

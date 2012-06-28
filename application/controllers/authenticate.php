@@ -53,6 +53,7 @@ class Authenticate extends CI_Controller {
             $this->session->set_userdata($session);
 
             if ($type == 'one') {
+                
                 redirect('clientarea/home');
             } else if ($type == 'two')
                 redirect('adminarea/home');
