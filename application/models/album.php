@@ -9,4 +9,11 @@ class Album extends CI_Model {
         return $query;
     }
 
+    function album_Contain_track($album_id, $track_id) {
+
+
+        $query = $this->db->query("INSERT INTO `contain`(`album_id`, `track_id`) VALUES ('$album_id','$track_id')");
+        //return $query;
+    }
+
 }
