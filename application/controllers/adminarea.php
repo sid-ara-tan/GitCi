@@ -44,7 +44,41 @@ class Adminarea extends CI_Controller {
     }
 
     function insert_track() {
-        
+        $data['message'] = '';
+        $this->load->model('album', 'Album');
+        $this->load->model('artist', 'Artist');
+        $this->load->model('track', 'Track');
+
+        $data['query_album'] = $this->Album->albumName();
+        $data['query_artist'] = $this->Artist->artistName();
+
+        if ($this->uri->segment(3) == 'inserted') {
+            $data['message'] = 'Successfully Inserted';
+            $this->load->view('admin_insert_track', $data);
+        } elseif ($this->uri->segment(3) == 'insert') {
+
+            $track_name = $this->input->post('track_name');
+            $track_info = $this->input->post('track_info');
+            $artist_id = $this->input->post('selectArtist');
+            $album_id = $this->input->post('selectAlbum');
+            $track_price = $this->input->post('track_price');
+            $data = array(
+                'track_name' => $track_name,
+                'track_info' => $track_info,
+                'track_price' => $track_price,
+                'artist_id' => $artist_id
+            );
+            
+            $this->db->insert('track', $data);
+            
+            $data['query_track'] = $this->Track->trackinfo();
+            $this->Album->album_Contain_track();
+            //$data['query_artist'] = $this->Artist->artistName();
+            redirect('adminarea/insert_track/inserted');
+        }
+
+        else
+            $this->load->view('admin_insert_track', $data);
     }
 
     function insert_artist() {

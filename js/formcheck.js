@@ -19,9 +19,9 @@ function formartist(frm)
 	else document.forms["myform1"].submit();
 }
 
-function formvRegister(frm)
+function formtrack(frm)
 {
-    	if((frm.useremail.value=="")||(frm.userid.value=="")||(frm.password.value=="")||(frm.username.value==""))alert("Enter ID EMAIL PASSWORD and NAME ");
+    	if((frm.track_name.value=="")||(frm.track_price.value=="")||(isNaN(frm.track_price.value)))alert("Enter Track Title And Price First With Valid Data");
 	else document.forms["myform1"].submit();
 }
 

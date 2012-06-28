@@ -28,25 +28,43 @@
                 <div>
                     Track Information:
 
-                    <textarea name="album_info" rows="3" cols="30" maxlenth="1000" ></textarea>
+                    <textarea name="track_info" rows="3" cols="30" maxlenth="1000" ></textarea>
                 </div>
                 <div>
                     Album:
-                    
+                    <select name="selectAlbum">
+                        <option value="">Select Album</option>
+                        <?php foreach ($query_album->result_array() as $row) {
+                            ?>
+                            <option value="<?php echo $row['album_id'] ?>"><?php echo $row['album_name']; ?></option>
+
+                        <?php } ?>
+
+                    </select>
+
                 </div>
 
                 <div>
                     Artist:
-                    
+                    <select name="selectArtist">
+                        <option value="">Select Artist</option>
+                        <?php foreach ($query_artist->result_array() as $row) {
+                            ?>
+                            <option value="<?php echo $row['artist_id'] ?>"><?php echo $row['artist_name']; ?></option>
+
+                        <?php } ?>
+
+                    </select>
+
                 </div>
 
                 <div>
                     Track Price (BDT):
-                    <input type="text" name="album_price" maxlength="30" value="" />
+                    <input type="text" name="track_price" maxlength="30" value="" />
                 </div>
 
 
-                <input type="button" name="btnsubmit" onclick="formtrack(this.form)" value="Insert Album" />
+                <input type="button" name="btnsubmit" onclick="formtrack(this.form)" value="Insert Track" />
 
 
         </div> 
