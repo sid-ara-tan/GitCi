@@ -17,15 +17,17 @@ class Adminarea extends CI_Controller {
         $this->load->view('admin_page', $data);
     }
 
-    function insert_artist() {
-        
-    }
-
     function insert_album() {
         
+        $data['']='';
+        $this->load->view('admin_insert_album', $data);
     }
 
     function insert_track() {
+        
+    }
+
+    function insert_artist() {
         
     }
 
