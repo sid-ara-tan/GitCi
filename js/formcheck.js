@@ -7,9 +7,9 @@ function formv(frm)
 	else document.forms["myform1"].submit();
 }
 
-function formvEmail(frm)
+function formalbum(frm)
 {
-	if(frm.email.value=="")alert("Enter Email Address First ");
+	if((frm.album_name.value=="")||(frm.album_price.value=="")||(isNaN(frm.album_price.value)))alert("Enter Album Name And Price First With Valid Data");
 	else document.forms["myform1"].submit();
 }
 
