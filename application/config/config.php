@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://localhost/GitCi/';
+$config['base_url']	= 'http://192.168.41.124/GitCi/';
 
 /*
 |--------------------------------------------------------------------------

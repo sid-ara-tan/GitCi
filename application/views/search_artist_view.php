@@ -7,7 +7,7 @@
     </head>
     <body>
         <div align="center">
-        <p><?php  echo anchor('clientarea/home','Home'); ?></p>
+        <p><?php  //echo anchor('clientarea/home','Home'); ?></p>
         <p>Enter  <?php echo $search;?> name</p>
         <?php 
             if($search=='artist')echo form_open('search/searchArtist/process');

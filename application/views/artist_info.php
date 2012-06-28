@@ -7,7 +7,7 @@
     </head>
     <body>
         <div align="center">
-        <p><?php  echo anchor('clientarea/home','Home'); ?></p>
+        <p><?php  //echo anchor('clientarea/home','Home'); ?></p>
         <?php
         if($infotype=='artist'){
             if($info==FALSE){

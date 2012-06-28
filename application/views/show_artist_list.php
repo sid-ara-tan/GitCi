@@ -7,7 +7,7 @@
     </head>
     <body>
         <div align="center">
-        <p><?php  echo anchor('clientarea/home','Home'); ?></p>
+        <p><?php  //echo anchor('clientarea/home','Home'); ?></p>
         <p>List of <?php echo $search; ?>s</p>
         <?php 
         if($list==FALSE){
