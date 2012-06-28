@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 27, 2012 at 06:36 PM
+-- Generation Time: Jun 28, 2012 at 04:34 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -38,20 +38,6 @@ CREATE TABLE IF NOT EXISTS `admin` (
 
 INSERT INTO `admin` (`id`, `password`) VALUES
 ('admin', '12345');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `student`
---
-
-CREATE TABLE IF NOT EXISTS `student` (
-  `student_id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(30) NOT NULL,
-  `password` varchar(30) NOT NULL,
-  `status` varchar(30) NOT NULL,
-  PRIMARY KEY (`student_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
