@@ -1,7 +1,10 @@
 <html>
     <body>
 
+        
+        
         <div align="center">
+            <?php echo heading('Welcome Admin !', 3, 'class="pink"'); ?>
             <?php echo anchor('adminarea/insert_album', "Insert Album"); ?>
         </div> 
         <div align="center">
