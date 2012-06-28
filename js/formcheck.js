@@ -7,21 +7,21 @@ function formv(frm)
 	else document.forms["myform1"].submit();
 }
 
-function formvEmail(frm)
+function formalbum(frm)
 {
-	if(frm.email.value=="")alert("Enter Email Address First ");
+	if((frm.album_name.value=="")||(frm.album_price.value=="")||(isNaN(frm.album_price.value)))alert("Enter Album Name And Price First With Valid Data");
 	else document.forms["myform1"].submit();
 }
 
-function formApp(frm)
+function formartist(frm)
 {
-    	if(frm.product_name.value=="")alert("Enter Product Name First ");
+    	if(frm.artist_name.value=="")alert("Enter Artrist Name First ");
 	else document.forms["myform1"].submit();
 }
 
-function formvRegister(frm)
+function formtrack(frm)
 {
-    	if((frm.useremail.value=="")||(frm.userid.value=="")||(frm.password.value=="")||(frm.username.value==""))alert("Enter ID EMAIL PASSWORD and NAME ");
+    	if((frm.track_name.value=="")||(frm.track_price.value=="")||(isNaN(frm.track_price.value)))alert("Enter Track Title And Price First With Valid Data");
 	else document.forms["myform1"].submit();
 }
 
