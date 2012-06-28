@@ -39,6 +39,7 @@ class Authenticate extends CI_Controller {
         $post['id'] = $this->input->post('userid');
         $post['password'] = $this->input->post('password');
         $this->load->model('admin', 'Admin');
+        $this->load->model('client', 'Client');
 
         $type = $_POST['myselect'];
         if ($type == 'one') {
@@ -52,7 +53,7 @@ class Authenticate extends CI_Controller {
             $this->session->set_userdata($session);
 
             if ($type == 'one') {
-                redirect('clientarea/login');
+                redirect('clientarea/home');
             } else if ($type == 'two')
                 redirect('adminarea/home');
         }
