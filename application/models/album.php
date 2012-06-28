@@ -31,7 +31,7 @@ class Album extends CI_Model{
     function albumName() {
 
 
-        $query = $this->db->query("select album_id,album_name from album");
+        $query = $this->db->query("select album_id,album_name from album order by album_name asc");
         return $query;
 
     }

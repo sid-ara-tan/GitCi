@@ -68,15 +68,15 @@ class Adminarea extends CI_Controller {
                 'track_price' => $track_price,
                 'artist_id' => $artist_id
             );
-            
-            $this->db->insert('track', $data);
-            
-            $track_query= $this->Track->trackinfo();
-            $row=$track_query->row();
-            $track_id=$row->track_id;
 
-            $this->Album->album_Contain_track($album_id,$track_id);
-            
+            $this->db->insert('track', $data);
+
+            $track_query = $this->Track->trackinfo();
+            $row = $track_query->row();
+            $track_id = $row->track_id;
+
+            $this->Album->album_Contain_track($album_id, $track_id);
+
             redirect('adminarea/insert_track/inserted');
         }
 
@@ -110,7 +110,12 @@ class Adminarea extends CI_Controller {
     }
 
     function edit_info() {
-        
+        $data[''] = "";
+        $this->load->model('album', 'Album');
+        $this->load->model('artist', 'Artist');
+        $this->load->model('track', 'Track');
+        $data['query_album'] = $this->Album->albumName();
+        $this->load->view('admin_edit', $data);
     }
 
     function delete_info() {
