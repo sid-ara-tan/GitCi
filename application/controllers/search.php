@@ -13,8 +13,9 @@ class Search extends CI_Controller{
         
     }
     
-    function getArtist($artistName){
-        
+    function getArtist($artist_id){
+        $data['artist_id']=$artist_id;
+        $this->load->view('artist_info',$data);
     }
     
     function searchAlbum($task=''){
@@ -30,8 +31,8 @@ class Search extends CI_Controller{
         }
     }
     
-    function getAlbum($albumName){
-        
+    function getAlbum($album_id){
+        echo "in album".$album_id;
     }
     
     function searchTrack($task=''){
@@ -46,8 +47,8 @@ class Search extends CI_Controller{
         }
     }
     
-    function getTrack($trackName){
-        
+    function getTrack($track_id){
+        echo "in Track".$track_id;
     }
     
     

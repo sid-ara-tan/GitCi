@@ -7,8 +7,18 @@
         }
         else{
             foreach ($list as $row) {
-                echo $row->artist_name."<br/>";
                 
+                if($search=='artist'){
+                    echo $row->artist_name."->";
+                    echo anchor('search/getArtist/'.$row->artist_id,'artistinfo');
+                }else if($search=='album'){
+                    echo $row->album_name."->";
+                    echo anchor('search/getAlbum/'.$row->album_id,'albuminfo');
+                }else if($search=='track'){
+                    echo $row->track_name."->";
+                    echo anchor('search/getTrack/'.$row->track_id,'trackinfo');
+                }
+                echo "<br/>";
             }
         }
         ?>
