@@ -1,13 +1,13 @@
 <html>
     <head>
-        <link rel="stylesheet" href="<?php echo base_url(); ?>css/" type="text/css" media="screen"/>
+        <link rel="stylesheet" href="<?php echo base_url(); ?>css/style.css" type="text/css" media="screen"/>
 
         <script type="text/javascript" src="<?php echo base_url(); ?>js/jquery-1.7.1.min.js"></script>
         <script type="text/javascript" src="<?php echo base_url(); ?>js/formcheck.js"></script>
     </head>
     <body>
 
-        <div align="center">
+        <div align="center" id="login_form">
 
             <?php echo heading('Welcome!', 3, 'class="pink"'); ?>
             <form action="<?php echo base_url(); ?>index.php/authenticate/validate_login" method="post" accept-charset="utf-8" id="myform1">
