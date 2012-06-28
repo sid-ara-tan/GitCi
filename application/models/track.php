@@ -25,4 +25,8 @@ class Track extends CI_Model{
             return FALSE;
         }
     }
+    
+    function getTrackByArtist($artist_id){
+        
+    }
 }
