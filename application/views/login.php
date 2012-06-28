@@ -7,36 +7,33 @@
     </head>
     <body>
 
-        <div align="center" id="login_form">
+        <div id="login_form">
 
             <?php echo heading('Welcome!', 3, 'class="pink"'); ?>
             <form action="<?php echo base_url(); ?>index.php/authenticate/validate_login" method="post" accept-charset="utf-8" id="myform1">
 
 
-
-
                 <div>
                     UserID:
-                    <input type="text" name="userid" maxlength="30" value="" />
-                </div>
+                    <input type="text" name="userid" maxlength="30" value="" />                
 
-                <div>
                     Password:
                     <input type="password" name="password" maxlength="30" value="" />
-                </div>
-                <br>
+
                 <select name="myselect">
                     <option value="one" >User</option>
                     <option value="two" >Admin</option>
-                </select></td><td><font color="red"><strong><?php echo $error; ?></strong></font>
-
+                </select>
+                 
+                 <p>   
+                 <font color="red"><strong><?php echo $error; ?></strong></font>
+                 </p>
 
 
 
                 <input type="button" name="btnsubmit" onclick="formv(this.form)" value="Login" />
 
                 <?php echo anchor('authenticate/register', "Register !"); ?>
-
 
 
 
