@@ -13,9 +13,9 @@ function formalbum(frm)
 	else document.forms["myform1"].submit();
 }
 
-function formApp(frm)
+function formartist(frm)
 {
-    	if(frm.product_name.value=="")alert("Enter Product Name First ");
+    	if(frm.artist_name.value=="")alert("Enter Artrist Name First ");
 	else document.forms["myform1"].submit();
 }
 

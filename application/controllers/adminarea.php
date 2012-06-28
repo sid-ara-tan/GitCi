@@ -20,15 +20,12 @@ class Adminarea extends CI_Controller {
     function insert_album() {
 
         $data['message'] = '';
-        
-        if ($this->uri->segment(3) == 'inserted')
-        {
+
+        if ($this->uri->segment(3) == 'inserted') {
             $data['message'] = 'Successfully Inserted';
             $this->load->view('admin_insert_album', $data);
-        }
-        
-        elseif ($this->uri->segment(3) == 'insert') {
-            
+        } elseif ($this->uri->segment(3) == 'insert') {
+
             $alb_name = $this->input->post('album_name');
             $alb_price = $this->input->post('album_price');
             $alb_info = $this->input->post('album_info');
@@ -38,7 +35,6 @@ class Adminarea extends CI_Controller {
                 'album_name' => $alb_name,
                 'album_price' => $alb_price,
                 'album_info' => $alb_info,
-
             );
             $this->db->insert('album', $data);
             redirect('adminarea/insert_album/inserted');
@@ -52,7 +48,24 @@ class Adminarea extends CI_Controller {
     }
 
     function insert_artist() {
-        
+        $data['message'] = '';
+
+        if ($this->uri->segment(3) == 'inserted') {
+            $data['message'] = 'Successfully Inserted';
+            $this->load->view('admin_insert_artist', $data);
+        } elseif ($this->uri->segment(3) == 'insert') {
+
+            $artist_name = $this->input->post('artist_name');
+
+
+            $data = array(
+                'artist_name' => $artist_name,
+            );
+            $this->db->insert('artist', $data);
+            redirect('adminarea/insert_artist/inserted');
+        }
+        else
+            $this->load->view('admin_insert_artist', $data);
     }
 
     function edit_price() {
