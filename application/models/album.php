@@ -25,7 +25,8 @@ class Album extends CI_Model{
         }else{
             return FALSE;
         }
-
+    }
+    
 
     function albumName() {
 
@@ -42,5 +43,5 @@ class Album extends CI_Model{
         //return $query;
     }
 
-}
+
 }

@@ -14,7 +14,9 @@
 
 
         $data['query'] = $this->Client->alldata($userid_session);
+        
         $this->load->view('user_page', $data);
+        
     }
 
 
