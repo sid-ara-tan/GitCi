@@ -31,8 +31,8 @@ class Authenticate extends CI_Controller {
         $post['id'] = $this->input->post('userid');
         $post['password'] = $this->input->post('password');
         $this->load->model('admin', 'Admin');
-        
-       $type = $_POST['myselect'];
+
+        $type = $_POST['myselect'];
         if ($type == 'one') {
             $data['query_idpass'] = $this->Client->userpass(strip_quotes($post));
         } elseif ($type == 'two')
@@ -42,18 +42,25 @@ class Authenticate extends CI_Controller {
             $session['islogged'] = TRUE;
             $session['name'] = $post['id'];
             $this->session->set_userdata($session);
-            
+
             if ($type == 'one') {
                 redirect('clientarea/login');
             } else if ($type == 'two')
                 redirect('adminarea/login');
         }
-        
-        else redirect('authenticate/login/error');
+
+        else
+            redirect('authenticate/login/error');
     }
 
     function validate_register() {
         
+    }
+
+    function logout() {
+        $this->load->helper('url');
+        $this->session->sess_destroy();
+        redirect('authenticate/login');
     }
 
 }

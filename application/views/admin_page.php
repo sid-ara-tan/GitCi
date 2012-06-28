@@ -2,7 +2,7 @@
     <body>
 
         <div align="center">
-            <?php echo anchor('adminarea/logout', "Log Out"); ?>
+            <?php echo anchor('authenticate/logout', "Log Out"); ?>
         </div>
 
 

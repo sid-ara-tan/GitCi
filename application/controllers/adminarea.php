@@ -18,11 +18,7 @@ class Adminarea extends CI_Controller {
     }
 
 
-    function logout() {
-        $this->load->helper('url');
-        $this->session->sess_destroy();
-        redirect('authenticate/login');
-    }
+
     
     function is_logged_in() {
         $is_logged = $this->session->userdata('islogged');
