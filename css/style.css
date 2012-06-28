@@ -35,7 +35,7 @@ input[type=text],input[type=password],textarea
 
 }
 
-input[type=submit],form a{
+input[type=submit],input[type=button],form a{
     border: none;
     margin-right: 1em;
     padding: 6px;
