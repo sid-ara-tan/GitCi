@@ -2,6 +2,7 @@
 
 
 class Album extends CI_Model{
+    
     function searchAlbumByName(){
     $name=$this->input->post('name');
         
@@ -25,7 +26,7 @@ class Album extends CI_Model{
         }else{
             return FALSE;
         }
-
+    }
 
     function albumName() {
 
@@ -42,5 +43,5 @@ class Album extends CI_Model{
         //return $query;
     }
 
-}
+
 }
