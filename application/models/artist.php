@@ -1,6 +1,6 @@
 <?php
 class Artist extends CI_Model{
-<<<<<<< HEAD
+
     function searchArtistByName(){
         $name=$this->input->post('name');
         
@@ -25,7 +25,7 @@ class Artist extends CI_Model{
             return FALSE;
         }
     }
-=======
+
         function artistName() {
 
 
@@ -33,5 +33,5 @@ class Artist extends CI_Model{
         return $query;
     }
     
->>>>>>> c065ce7f165296affad106865a41b5feec81e468
+
 }

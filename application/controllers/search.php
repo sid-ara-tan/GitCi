@@ -15,6 +15,9 @@ class Search extends CI_Controller{
     
     function getArtist($artist_id){
         $data['artist_id']=$artist_id;
+        $data['infotype']='artist';
+        $this->load->model('track');
+        $data['info']=$this->track->getTrackByArtist($artist_id);
         $this->load->view('artist_info',$data);
     }
     
@@ -48,7 +51,11 @@ class Search extends CI_Controller{
     }
     
     function getTrack($track_id){
-        echo "in Track".$track_id;
+        
+        $data['infotype']='artist';
+        $this->load->model('track');
+        $data['info']=$this->track->getTrackById($track_id);
+        $this->load->view('artist_info',$data);
     }
     
     

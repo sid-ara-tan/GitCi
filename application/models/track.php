@@ -1,6 +1,6 @@
 <?php
 
-<<<<<<< HEAD
+
 class Track extends CI_Model{
     function searchTrackByName(){
         $name=$this->input->post('name');
@@ -28,10 +28,33 @@ class Track extends CI_Model{
     }
     
     function getTrackByArtist($artist_id){
-        
+        $query=$this->db->query("
+                        SELECT *
+                        FROM track
+                        WHERE artist_id='$artist_id';
+                        ");
+        if($query->num_rows()>0){
+            return $query->result();
+        }else{
+            return FALSE;
+        }
+      
     }
-=======
-class Track extends CI_Model {
+    
+    function getTrackById($track_id){
+        $query=$this->db->query("
+                        SELECT *
+                        FROM track
+                        WHERE track_id='$track_id';
+                        ");
+        if($query->num_rows()>0){
+            return $query->result();
+        }else{
+            return FALSE;
+        }
+      
+    }
+
 
     function trackinfo() {
 
@@ -42,5 +65,5 @@ class Track extends CI_Model {
         return $query;
     }
 
->>>>>>> c065ce7f165296affad106865a41b5feec81e468
+
 }

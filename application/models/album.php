@@ -1,6 +1,6 @@
 <?php
 
-<<<<<<< HEAD
+
 class Album extends CI_Model{
     function searchAlbumByName(){
     $name=$this->input->post('name');
@@ -25,15 +25,15 @@ class Album extends CI_Model{
         }else{
             return FALSE;
         }
-=======
-class Album extends CI_Model {
+
 
     function albumName() {
 
 
         $query = $this->db->query("select album_id,album_name from album");
         return $query;
->>>>>>> c065ce7f165296affad106865a41b5feec81e468
+
     }
 
+}
 }
