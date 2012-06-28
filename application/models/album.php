@@ -2,6 +2,7 @@
 
 
 class Album extends CI_Model{
+    
     function searchAlbumByName(){
     $name=$this->input->post('name');
         
@@ -25,7 +26,7 @@ class Album extends CI_Model{
         }else{
             return FALSE;
         }
-
+    }
 
     function albumName() {
 
@@ -35,5 +36,12 @@ class Album extends CI_Model{
 
     }
 
-}
+    function album_Contain_track($album_id, $track_id) {
+
+
+        $query = $this->db->query("INSERT INTO `contain`(`album_id`, `track_id`) VALUES ('$album_id','$track_id')");
+        //return $query;
+    }
+
+
 }

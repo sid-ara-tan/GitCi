@@ -71,9 +71,12 @@ class Adminarea extends CI_Controller {
             
             $this->db->insert('track', $data);
             
-            $data['query_track'] = $this->Track->trackinfo();
-            $this->Album->album_Contain_track();
-            //$data['query_artist'] = $this->Artist->artistName();
+            $track_query= $this->Track->trackinfo();
+            $row=$track_query->row();
+            $track_id=$row->track_id;
+
+            $this->Album->album_Contain_track($album_id,$track_id);
+            
             redirect('adminarea/insert_track/inserted');
         }
 
